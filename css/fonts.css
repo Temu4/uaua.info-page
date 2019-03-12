@@ -1,0 +1,26 @@
+/* Jakob Extra CTT*/
+@font-face {
+  font-family: 'Jakob Extra';
+  src: url('../fonts/Jacob\ Extra/Jacob\ Extra.woff') format('woff'),
+    url('../fonts/Jacob\ Extra/Jacob\ Extra.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Jakob TT */
+@font-face {
+  font-family: 'Jakob';
+  src: url('../fonts/Jacob/Jacob.woff') format('woff'), url('../fonts/Jacob/Jacob.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Chocolate cyr-lat */
+
+@font-face {
+  font-family: 'Chocolate';
+  src: url('../fonts/Chocolate/Chocolate.woff') format('woff'),
+    url('../fonts/Chocolate/Chocolate.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
