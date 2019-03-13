@@ -4,7 +4,9 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background: url('../img/grid(5).png') top center repeat;
+  background: url('../img/wave1.png') top right repeat-x,
+    url('../img/wave2.png') bottom right repeat-x, url('../img/grid(5).png') top left repeat;
+  background-size: 140% 220px, 140% 250px, 100%;
 }
 
 .container {
@@ -17,8 +19,10 @@ body {
   height: 100%;
   min-height: 100vh;
   z-index: 1;
+  font-family: Tahoma, sans-serif;
 }
 
+/************** HEADER ****************/
 .header {
   display: block;
   text-align: center;
@@ -52,38 +56,248 @@ body {
   display: none;
 }
 
+/************** MAIN ****************/
 .main {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 980px;
-  height: 1992px;
-  z-index: 34;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
 }
-.main__content {
-  background-image: url('UAUA.info проводит голосование среди своих читателей, чтобы выя.png');
-  position: absolute;
-  left: 132px;
-  top: 651px;
-  width: 721px;
-  height: 169px;
-  z-index: 33;
-}
+
 .main__header {
-  font-size: 36px;
-  font-family: 'JakobTT';
+  font-size: 26px;
+  font-family: 'Jakob';
+  color: rgb(141, 175, 221);
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+}
+
+.main__content {
+  width: 90%;
+}
+
+.main__results {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  width: 90%;
+  text-align: center;
+}
+
+.results-number {
+  display: block;
+  font-size: 40px;
+  font-family: 'Jakob';
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  content: '4';
+  width: 70px;
+  height: 70px;
+  background: url('../img/Ellipse\ 4\ copy\ 3.png') no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+.results-text {
+  display: block;
+  width: 80%;
+  min-height: 50px;
+  background: url('../img/Rectangle\ 3\ copy\ 17.png') no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+  margin-left: -30px;
+  padding-left: 40px;
+  padding-top: 20px;
+  text-align: left;
+  z-index: -1;
+}
+
+.main__categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.category__label {
+  position: relative;
+  font-family: 'Jakob Extra';
+  font-size: 1.5em;
+  width: 250px;
+  height: 70px;
+  vertical-align: middle;
+  top: -140px;
+  left: 5%;
+  color: white;
+  background: url('../img/фиолетовая\ плашка\ для\ категории.png') transparent no-repeat;
+  background-size: contain;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.label--first {
+  background: url('../img/фиолетовая\ плашка\ для\ категории.png') transparent no-repeat;
+  background-size: contain;
+}
+.label--second {
+  background: url('../img/фиолетовая\ плашка\ для\ категории2.png') transparent no-repeat;
+  background-size: contain;
+}
+
+.category__img {
+  width: 140px;
+  z-index: -1;
+}
+
+.main__partners {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.partners__title {
+  width: 100%;
+  font-size: 26px;
+  font-family: 'Jakob';
   color: rgb(141, 175, 221);
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
-  position: absolute;
-  left: 43.885px;
-  top: 578.805px;
-  width: 465px;
-  height: 49px;
-  z-index: 32;
 }
 
+.partners__logo {
+  width: 100px;
+  height: 28px;
+}
+
+.partners__logo:hover {
+  opacity: 0.7;
+}
+.partners__logo:focus {
+  box-shadow: 2px 2px 5px lightblue;
+}
+
+.logo-1 {
+  background: url('../img/logo\ \(2\).png') no-repeat;
+  background-size: contain;
+}
+
+.logo-2 {
+  background: url('../img/219519_company_logo_1.png') no-repeat;
+  background-size: cover;
+}
+
+.logo-3 {
+  background: url('../img/logo\ \(1\).png') no-repeat;
+  background-size: cover;
+}
+
+/************** FOOTER ****************/
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  font-family: 'Arial';
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.contacts__link-group {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding-left: 15%;
+  width: 100%;
+}
+
+.contacts {
+  float: left;
+  width: auto;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.contacts__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts:hover {
+  color: rgb(243, 243, 134);
+}
+.contacts:focus {
+  border: 1px solid skyblue;
+}
+.contacts:active {
+  color: grey;
+}
+
+.contacts::after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin-top: -20px;
+  margin-left: -25px;
+}
+
+.contacts--adress::after {
+  background: url('../img/home.png') no-repeat;
+}
+.contacts--mail::after {
+  background: url('../img/close-envelope.png') no-repeat;
+}
+.contacts--phone::after {
+  background: url('../img/phone-receiver.png') no-repeat;
+}
+.contacts--web::after {
+  background: url('../img/icon.png') no-repeat;
+}
+
+.contacts__btns-group {
+  text-align: center;
+  width: 100%;
+}
+
+.contacts__btn {
+  min-width: 48px;
+  min-height: 48px;
+  background-size: contain;
+  border: none;
+}
+
+.contacts__btn:hover {
+  opacity: 0.8;
+}
+.contacts__btn:active {
+  opacity: 0.5;
+}
+.btn--facebook {
+  background: url('../img/Кнопка\ f.png') center center no-repeat;
+}
+.btn--instagram {
+  background: url('../img/Кнопка\ insta.png') center center no-repeat;
+}
+.btn--viber {
+  background: url('../img/viber\ icon\ logo.png') center center no-repeat;
+}
+
+/**
+for smartphones
+**/
 @media screen and (min-width: 359px) {
   .title--firstRow {
     margin-top: -10px;
@@ -97,8 +311,14 @@ body {
     margin-top: -10px;
     font-size: 2.4em;
   }
+  .contacts__link-group {
+    padding-left: 15%;
+  }
 }
 
+/**
+for tabs
+**/
 @media screen and (min-width: 599px) {
   .container {
     width: 600px;
@@ -123,18 +343,29 @@ body {
     display: block;
     position: absolute;
     width: 200px;
+    margin-top: -20px;
     margin-left: 400px;
   }
   .img-stroller {
     display: block;
     position: absolute;
     width: 150px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 350px;
+  }
+  .contacts__link-group {
+    padding-left: 28%;
   }
 }
 
+/**
+for PC screens
+**/
 @media screen and (min-width: 1000px) {
+  body {
+    background-size: 140% 550px, 140% 250px, 100%;
+  }
+
   .container {
     width: 1000px;
   }
@@ -173,5 +404,53 @@ body {
     width: auto;
     margin-top: 145px;
     margin-left: 585px;
+  }
+
+  .main__header {
+    font-size: 36px;
+  }
+
+  .main {
+    margin-top: 120px;
+  }
+
+  .main__content {
+    margin-top: -30px;
+    margin-left: 55px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  .main__results {
+    margin-top: 30px;
+    margin-left: -15px;
+  }
+
+  .results-number {
+    font-size: 4em;
+    width: 90px;
+    height: 90px;
+  }
+
+  .results-text {
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .main__categories {
+    margin-top: 85px;
+  }
+
+  .category__img {
+    width: auto;
+  }
+
+  .category__label {
+    top: -160px;
+    left: 10%;
+  }
+
+  .contacts__link-group {
+    padding-left: 38%;
   }
 }
