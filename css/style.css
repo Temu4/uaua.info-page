@@ -450,6 +450,16 @@ for PC screens
     left: 10%;
   }
 
+  .main__partners {
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .partners__logo {
+    width: 120px;
+    height: 33px;
+  }
+
   .contacts__link-group {
     padding-left: 38%;
   }
