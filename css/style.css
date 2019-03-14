@@ -4,9 +4,12 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background: url('../img/wave1.png') top right repeat-x,
-    url('../img/wave2.png') bottom right repeat-x, url('../img/grid(5).png') top left repeat;
-  background-size: 140% 220px, 140% 250px, 100%;
+  background: url('../img/waves_violet.png') top left no-repeat,
+    url('../img/waves_green.png') right top no-repeat,
+    url('../img/background_top.png') top center repeat-x,
+    url('../img/background_bottom_wave_2.png') bottom 120px left repeat-x,
+    url('../img/background_bottom_rectangle.png') bottom left repeat-x;
+  background-size: 50px, 120px, 400px, 250px, auto 150px;
 }
 
 .container {
@@ -36,8 +39,9 @@ body {
   flex-flow: column nowrap;
   width: 300px;
   height: 200px;
-  background: url('../img/Background\ for\ the\ title.png') transparent top center no-repeat;
-  background-size: contain;
+  background: url('../img/background_title.png') top center no-repeat,
+    url('../img/circle_blue.png') bottom left 30px no-repeat;
+  background-size: contain, 70px;
 }
 .title--firstRow {
   font-size: 1.5em;
@@ -62,6 +66,19 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
+  /*background for content */
+  background: url('../img/waves_green.png') top left no-repeat,
+    url('../img/point_pink.png') top 60px left 80px no-repeat,
+    url('../img/point_green.png') top 20px left 180px no-repeat,
+    url('../img/point_yellow.png') top right 120px no-repeat,
+    url('../img/point_pink.png') top 80px right 40px no-repeat,
+    url('../img/waves_pink.png') top 150px right no-repeat,
+    url('../img/waves_green_2.png') top 350px right no-repeat,
+    /*background for categories */ url('../img/background_categories_top.png') top 410px left
+      repeat-x,
+    url('../img/background_categories_rectangle.png') top 480px left repeat-x,
+    url('../img/background_categories_bottom.png') top 920px left repeat-x;
+  background-size: 120px, 10px, 10px, 10px, 10px, 100px, 120px, 400px auto, auto 450px, contain;
 }
 
 .main__header {
@@ -87,6 +104,7 @@ body {
   margin-bottom: 80px;
   width: 90%;
   text-align: center;
+  z-index: -1;
 }
 
 .results-number {
@@ -99,16 +117,15 @@ body {
   content: '4';
   width: 70px;
   height: 70px;
-  background: url('../img/Ellipse\ 4\ copy\ 3.png') no-repeat;
+  background: url('../img/circle_result.png') no-repeat;
   background-size: contain;
-  z-index: 0;
 }
 
 .results-text {
   display: block;
   width: 80%;
   min-height: 50px;
-  background: url('../img/Rectangle\ 3\ copy\ 17.png') no-repeat;
+  background: url('../img/rectangle_result.png') no-repeat;
   background-size: cover;
   margin-top: 10px;
   margin-left: -30px;
@@ -120,6 +137,7 @@ body {
 
 .main__categories {
   display: flex;
+  width: 100%;
   flex-flow: row wrap;
   justify-content: center;
   text-align: center;
@@ -135,21 +153,20 @@ body {
   top: -140px;
   left: 5%;
   color: white;
-  background: url('../img/фиолетовая\ плашка\ для\ категории.png') transparent no-repeat;
-  background-size: contain;
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: center;
   font-size: 18px;
   line-height: 1.2;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .label--first {
-  background: url('../img/фиолетовая\ плашка\ для\ категории.png') transparent no-repeat;
+  background: url('../img/category_label_left.png') transparent no-repeat;
   background-size: contain;
 }
 .label--second {
-  background: url('../img/фиолетовая\ плашка\ для\ категории2.png') transparent no-repeat;
+  background: url('../img/category_label_right.png') no-repeat;
   background-size: contain;
 }
 
@@ -160,9 +177,16 @@ body {
 
 .main__partners {
   display: flex;
+  width: 100%;
   flex-flow: row wrap;
   justify-content: space-around;
   margin-bottom: 40px;
+  background: url('../img/waves_green.png') top 40px left -50px no-repeat,
+    url('../img/point_pink.png') top 50px left 80px no-repeat,
+    url('../img/point_pink.png') top 40px right 80px no-repeat,
+    url('../img/point_pink.png') bottom right 130px no-repeat,
+    url('../img/waves_pink_2.png') top -20px right -30px no-repeat;
+  background-size: 120px, 10px, 10px, 10px, 100px;
 }
 
 .partners__title {
@@ -178,28 +202,29 @@ body {
 .partners__logo {
   width: 100px;
   height: 28px;
+  transition: transform 1s;
 }
 
 .partners__logo:hover {
-  opacity: 0.7;
+  transform: scale(1.2);
 }
 .partners__logo:focus {
   box-shadow: 2px 2px 5px lightblue;
 }
 
 .logo-1 {
-  background: url('../img/logo\ \(2\).png') no-repeat;
+  background: url('../img/logo_likar_info.png') no-repeat;
   background-size: contain;
 }
 
 .logo-2 {
-  background: url('../img/219519_company_logo_1.png') no-repeat;
-  background-size: cover;
+  background: url('../img/logo_hochu_ua.png') no-repeat;
+  background-size: contain;
 }
 
 .logo-3 {
-  background: url('../img/logo\ \(1\).png') no-repeat;
-  background-size: cover;
+  background: url('../img/logo_open_media_group.png') no-repeat;
+  background-size: contain;
 }
 
 /************** FOOTER ****************/
@@ -277,22 +302,25 @@ body {
   min-height: 48px;
   background-size: contain;
   border: none;
+  cursor: pointer;
+  transition: transform 1s;
 }
 
 .contacts__btn:hover {
   opacity: 0.8;
+  transform: rotate(-15deg);
 }
 .contacts__btn:active {
   opacity: 0.5;
 }
 .btn--facebook {
-  background: url('../img/Кнопка\ f.png') center center no-repeat;
+  background: url('../img/btn_facebook.png') center center no-repeat;
 }
 .btn--instagram {
-  background: url('../img/Кнопка\ insta.png') center center no-repeat;
+  background: url('../img/btn_instagram.png') center center no-repeat;
 }
 .btn--viber {
-  background: url('../img/viber\ icon\ logo.png') center center no-repeat;
+  background: url('../img/btn_viber.png') center center no-repeat;
 }
 
 /**
@@ -320,15 +348,24 @@ for smartphones
 for tabs
 **/
 @media screen and (min-width: 599px) {
-  .container {
-    width: 600px;
+  body {
+    background: url('../img/waves_violet.png') top 10px left no-repeat,
+      url('../img/waves_green.png') 75% top no-repeat,
+      url('../img/background_top.png') top center repeat-x,
+      url('../img/background_bottom_wave_2.png') bottom 120px left repeat-x,
+      url('../img/background_bottom_rectangle.png') bottom left repeat-x;
+    background-size: 60px, 150px, 500px, 250px, auto 150px;
   }
+
   .header {
     width: 100%;
   }
   .header__title {
     height: 250px;
     margin-left: 50px;
+    background: url('../img/background_title.png') top center no-repeat,
+      url('../img/circle_blue.png') bottom 30px left 30px no-repeat;
+    background-size: contain, 80px;
   }
   .title--firstRow {
     font-size: 2em;
@@ -353,6 +390,29 @@ for tabs
     margin-top: 80px;
     margin-left: 350px;
   }
+  .main {
+    background: url('../img/waves_green.png') top left -50px no-repeat,
+      url('../img/point_pink.png') top 60px left 80px no-repeat,
+      url('../img/point_green.png') top 20px left 180px no-repeat,
+      url('../img/point_yellow.png') top right 120px no-repeat,
+      url('../img/point_pink.png') top 80px right 40px no-repeat,
+      url('../img/waves_pink.png') top 110px right -20px no-repeat,
+      url('../img/waves_green_2.png') top 220px right -50px no-repeat,
+      url('../img/background_categories_top.png') top 310px left repeat-x,
+      url('../img/background_categories_rectangle.png') top 380px left repeat-x,
+      url('../img/background_categories_bottom.png') top 510px left repeat-x;
+    background-size: 150px, 10px, 10px, 10px, 10px, 120px, 150px, contain, auto 150px, contain;
+  }
+
+  .main__partners {
+    background: url('../img/waves_green.png') top left -50px no-repeat,
+      url('../img/point_pink.png') top 50px left 160px no-repeat,
+      url('../img/point_pink.png') top 40px right 120px no-repeat,
+      url('../img/point_pink.png') bottom right 190px no-repeat,
+      url('../img/waves_pink_2.png') top -20px right -30px no-repeat;
+    background-size: 150px, 10px, 10px, 10px, 100px;
+  }
+
   .contacts__link-group {
     padding-left: 28%;
   }
@@ -363,9 +423,13 @@ for PC screens
 **/
 @media screen and (min-width: 1000px) {
   body {
-    background-size: 140% 550px, 140% 250px, 100%;
+    background: url('../img/waves_violet.png') top 25px left no-repeat,
+      url('../img/waves_green.png') top 10px right 150px no-repeat,
+      url('../img/background_top.png') top center repeat-x,
+      url('../img/background_bottom_wave_2.png') bottom 50px left repeat-x,
+      url('../img/background_bottom_rectangle.png') bottom left repeat-x;
+    background-size: auto;
   }
-
   .container {
     width: 1000px;
   }
@@ -377,6 +441,9 @@ for PC screens
     height: 370px;
     margin-top: 40px;
     margin-left: -80px;
+    background: url('../img/background_title.png') top center no-repeat,
+      url('../img/circle_blue.png') bottom left 30px no-repeat;
+    background-size: contain, 100px;
   }
 
   .title--firstRow {
@@ -412,6 +479,17 @@ for PC screens
 
   .main {
     margin-top: 120px;
+    background: url('../img/waves_green.png') top left 20px no-repeat,
+      url('../img/point_pink.png') top 15px left 370px no-repeat,
+      url('../img/point_green.png') top 72px left 220px no-repeat,
+      url('../img/point_yellow.png') top right 330px no-repeat,
+      url('../img/point_pink.png') top 80px right 120px no-repeat,
+      url('../img/waves_pink.png') top 145px right -10px no-repeat,
+      url('../img/waves_green_2.png') top 340px right 120px no-repeat,
+      url('../img/background_categories_top.png') top 490px left repeat-x,
+      url('../img/background_categories_rectangle.png') top 570px left repeat-x,
+      url('../img/background_categories_bottom.png') top 720px left repeat-x;
+    background-size: 180px, 10px, 10px, 10px, 10px, 150px, 180px, contain, auto 150px, contain;
   }
 
   .main__content {
@@ -451,10 +529,13 @@ for PC screens
   }
 
   .main__partners {
-    width: 70%;
-    justify-content: space-between;
+    background: url('../img/waves_green.png') top left -50px no-repeat,
+      url('../img/point_pink.png') top 50px left 160px no-repeat,
+      url('../img/point_pink.png') top 10px right 320px no-repeat,
+      url('../img/point_pink.png') bottom right 380px no-repeat,
+      url('../img/waves_pink_2.png') top -20px right -30px no-repeat;
+    background-size: 150px, 10px, 10px, 10px, 100px;
   }
-
   .partners__logo {
     width: 120px;
     height: 33px;
