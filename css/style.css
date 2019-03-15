@@ -208,7 +208,7 @@ body {
   transform: scale(1.2);
 }
 .partners__logo:focus {
-  box-shadow: 2px 2px 5px lightblue;
+  opacity: 0.7;
 }
 
 .logo-1 {
