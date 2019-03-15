@@ -7,9 +7,13 @@ body {
   background: url('../img/waves_violet.png') top left no-repeat,
     url('../img/waves_green.png') right top no-repeat,
     url('../img/background_top.png') top center repeat-x,
+    url('../img/background_categories_top.png') top 620px left repeat-x,
+    url('../img/background_categories_rectangle.png') top 680px left repeat-x,
+    url('../img/background_categories_bottom.png') top 1130px left repeat-x,
     url('../img/background_bottom_wave_2.png') bottom 120px left repeat-x,
     url('../img/background_bottom_rectangle.png') bottom left repeat-x;
-  background-size: 50px, 120px, 400px, 250px, auto 150px;
+
+  background-size: 50px, 120px, 400px, 400px auto, auto 450px, contain, 250px, auto 150px;
 }
 
 .container {
@@ -66,19 +70,14 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
-  /*background for content */
   background: url('../img/waves_green.png') top left no-repeat,
     url('../img/point_pink.png') top 60px left 80px no-repeat,
     url('../img/point_green.png') top 20px left 180px no-repeat,
     url('../img/point_yellow.png') top right 120px no-repeat,
     url('../img/point_pink.png') top 80px right 40px no-repeat,
     url('../img/waves_pink.png') top 150px right no-repeat,
-    url('../img/waves_green_2.png') top 350px right no-repeat,
-    /*background for categories */ url('../img/background_categories_top.png') top 410px left
-      repeat-x,
-    url('../img/background_categories_rectangle.png') top 480px left repeat-x,
-    url('../img/background_categories_bottom.png') top 920px left repeat-x;
-  background-size: 120px, 10px, 10px, 10px, 10px, 100px, 120px, 400px auto, auto 450px, contain;
+    url('../img/waves_green_2.png') top 350px right no-repeat;
+  background-size: 120px, 10px, 10px, 10px, 10px, 100px, 120px;
 }
 
 .main__header {
@@ -344,6 +343,19 @@ for smartphones
   }
 }
 
+@media screen and (min-width: 456px) {
+  body {
+    background: url('../img/waves_violet.png') top left no-repeat,
+      url('../img/waves_green.png') right top no-repeat,
+      url('../img/background_top.png') top center repeat-x,
+      url('../img/background_categories_top.png') top 570px left repeat-x,
+      url('../img/background_categories_rectangle.png') top 620px left repeat-x,
+      url('../img/background_categories_bottom.png') top 760px left repeat-x,
+      url('../img/background_bottom_wave_2.png') bottom 120px left repeat-x,
+      url('../img/background_bottom_rectangle.png') bottom left repeat-x;
+    background-size: 60px, 150px, 500px, contain, auto 200px, contain, 250px, auto 150px;
+  }
+}
 /**
 for tabs
 **/
@@ -352,9 +364,12 @@ for tabs
     background: url('../img/waves_violet.png') top 10px left no-repeat,
       url('../img/waves_green.png') 75% top no-repeat,
       url('../img/background_top.png') top center repeat-x,
+      url('../img/background_categories_top.png') top 580px left repeat-x,
+      url('../img/background_categories_rectangle.png') top 690px left repeat-x,
+      url('../img/background_categories_bottom.png') top 750px left repeat-x,
       url('../img/background_bottom_wave_2.png') bottom 120px left repeat-x,
       url('../img/background_bottom_rectangle.png') bottom left repeat-x;
-    background-size: 60px, 150px, 500px, 250px, auto 150px;
+    background-size: 60px, 150px, 500px, contain, auto 100px, contain, 250px, auto 150px;
   }
 
   .header {
@@ -397,11 +412,8 @@ for tabs
       url('../img/point_yellow.png') top right 120px no-repeat,
       url('../img/point_pink.png') top 80px right 40px no-repeat,
       url('../img/waves_pink.png') top 110px right -20px no-repeat,
-      url('../img/waves_green_2.png') top 220px right -50px no-repeat,
-      url('../img/background_categories_top.png') top 310px left repeat-x,
-      url('../img/background_categories_rectangle.png') top 380px left repeat-x,
-      url('../img/background_categories_bottom.png') top 510px left repeat-x;
-    background-size: 150px, 10px, 10px, 10px, 10px, 120px, 150px, contain, auto 150px, contain;
+      url('../img/waves_green_2.png') top 220px right -50px no-repeat;
+    background-size: 150px, 10px, 10px, 10px, 10px, 120px, 150px;
   }
 
   .main__partners {
@@ -426,6 +438,9 @@ for PC screens
     background: url('../img/waves_violet.png') top 25px left no-repeat,
       url('../img/waves_green.png') top 10px right 150px no-repeat,
       url('../img/background_top.png') top center repeat-x,
+      url('../img/background_categories_top.png') top 1020px left repeat-x,
+      url('../img/background_categories_rectangle.png') top 1110px left repeat-x,
+      url('../img/background_categories_bottom.png') top 1300px left repeat-x,
       url('../img/background_bottom_wave_2.png') bottom 50px left repeat-x,
       url('../img/background_bottom_rectangle.png') bottom left repeat-x;
     background-size: auto;
@@ -485,11 +500,8 @@ for PC screens
       url('../img/point_yellow.png') top right 330px no-repeat,
       url('../img/point_pink.png') top 80px right 120px no-repeat,
       url('../img/waves_pink.png') top 145px right -10px no-repeat,
-      url('../img/waves_green_2.png') top 340px right 120px no-repeat,
-      url('../img/background_categories_top.png') top 490px left repeat-x,
-      url('../img/background_categories_rectangle.png') top 570px left repeat-x,
-      url('../img/background_categories_bottom.png') top 720px left repeat-x;
-    background-size: 180px, 10px, 10px, 10px, 10px, 150px, 180px, contain, auto 150px, contain;
+      url('../img/waves_green_2.png') top 340px right 120px no-repeat;
+    background-size: 180px, 10px, 10px, 10px, 10px, 150px, 180px;
   }
 
   .main__content {
